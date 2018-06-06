@@ -10,7 +10,7 @@ const profileSchema = new mongoose.Schema({
   company: String,
   name: String,
   website: String,
-  Email: String,
+  email: String,
   image: String,
   creator: {type: mongoose.Schema.Types.ObjectId, ref: 'user'}
   // comments: [commentSchema]

@@ -21,9 +21,7 @@ app.use(express.static(`${__dirname}/public`));
 app.use(ejsLayouts);
 app.use(morgan('dev'));
 
-app.get('/', (req, res) => res.render('home', {
-  isHomepage: true
-}));
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 

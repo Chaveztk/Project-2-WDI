@@ -40,7 +40,8 @@
               <% if(locals.isLoggedIn){%>
                   <li>Hi <%= locals.user.username %></li>
                   <li><a href="/logout">Logout</a></li>
-                  <li><a href="/networks/new">Add profile</a> </li>
+                  <li><a href="/networks/new">Update profile</a> </li>
+                  <li><a href="/networks/show">Display Company Users</a> </li>
 
               <%} else {%>
                   <li><a href="/login">Login</a></li>
@@ -49,15 +50,15 @@
             </ul>
           </div>
         </div>
-        <%# <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="/documentation/overview/start/">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <%# <a class="navbar-link" href="/documentation/overview/start/">
             Docs
           </a>
           <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item" href="">
-              My Profile
-            </a>
-            <a class="navbar-item" href="">
+            <a class="navbar-item" href="/networks">
+              Netowrks
+            </a> %>
+            <%# <a class="navbar-item" href="">
               Add User
             </a>
             <a class="navbar-item" href="">
@@ -68,16 +69,16 @@
             </a>
             <a class="navbar-item" href="">
               Form
-            </a>
+            </a> %>
             <hr class="navbar-divider">
-          </div> %>
+          </div>
         </div>
       </div>
       <form>
-        <input type="text" name="firstname" placeholder="Search Events">
+        <%# <input type="text" name="firstname" placeholder="Search Events">
         <div id="submit-button">
-          <button>Submit</button>
-        </div>
+           <button>Submit</button>
+        </div> %>
       </form>
 
       <div class="navbar-end">

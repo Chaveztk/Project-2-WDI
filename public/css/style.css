@@ -1,13 +1,14 @@
-
-
-
+.columns{
+  font-weight: bold;
+  color: black;
+}
 body{
   background-color: #A9A9A9;
-  height: 100%;
-  width: 100%;
-  background-repeat: no-repeat;
+  /* height: 100%;
+  width: 100%; */
+  /* background-repeat: no-repeat;
   background-size: auto;
-  background-size: contain;
+  background-size: contain; */
 }
 
 .giv{
@@ -19,7 +20,7 @@ body{
   position:absolute;
    bottom:0;
    width:100%;
-   height:60px;   /* Height of the footer */
+   height:10%;   /* Height of the footer */
    background:#999999;
 }
 

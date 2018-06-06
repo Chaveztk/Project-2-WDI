@@ -1,14 +1,24 @@
-<h2>All Pictures</h2>
 
-<ul>
-
-<% profiles.forEach( profile =>{ %>
-  <li>
-     <a href='/network/<%= profile.id %> '><%= profile.comapny %></a>
-    <img style="max-width: 200px " src='<%= picture.image %>' alt='<%= picture.company %>' />
-    <% if(profile.creator){%>
-      <%= profile.creator.username %>
-    <% } %>
-  </li>
-<% }) %>
-</ul>
+<div class="columns is-multiline">
+ <% profiles.forEach( (profile, key) => { %>
+   <div class="column is-one-third-desktop is-half-tablet">
+     <div class="card">
+       <div class="card-image">
+         <figure class="image is-4by3">
+           <img src="<%= profile.image %>" alt="<%= profile.name%>">
+         </figure>
+       </div>
+       <div class="card-content">
+         <div class="content">
+             <h4 class="title is-4">
+             <a href="/networks/<%= profile._id %>">
+             <%= profile.name %>
+             </a>
+             </h4>
+             <h6 class="subtitle is-6">Company : <%= profile.company %></h6>
+         </div>
+       </div>
+     </div>
+   </div>
+ <% }) %>
+</div>

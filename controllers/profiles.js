@@ -49,7 +49,7 @@ function updateRoute(req, res){
     .findById(req.params.id)
     .update(req.body)
     .then(profile => {
-      return res.redirect(`/networks/${profile.id}`);
+      return res.redirect(`/networks${profile.id}`);
     });
 }
 
