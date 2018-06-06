@@ -1,10 +1,10 @@
 
 const mongoose = require('mongoose');
 
-const commentSchema = new mongoose.Schema({
-  content: String,
-  user: {type: mongoose.Schema.Types.ObjectId, ref: 'user'}
-});
+// const commentSchema = new mongoose.Schema({
+//   content: String,
+//   user: {type: mongoose.Schema.Types.ObjectId, ref: 'user'}
+// });
 
 const profileSchema = new mongoose.Schema({
   company: String,
@@ -12,8 +12,8 @@ const profileSchema = new mongoose.Schema({
   website: String,
   Email: String,
   image: String,
-  creator: {type: mongoose.Schema.Types.ObjectId, ref: 'user'},
-  comments: [commentSchema]
+  creator: {type: mongoose.Schema.Types.ObjectId, ref: 'user'}
+  // comments: [commentSchema]
 }, {
   timestamps: true
 });

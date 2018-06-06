@@ -1,18 +1,18 @@
 
 
 <div class=“columns”>
- <div class=“column is-half”>
-   <img src=“<%= profile.image %>” alt=“<%= profile.company %>“>
+ <div class="column is-half">
+   <img src="<%= profile.image %>" alt="<%= profile.company %>">
  </div>
- <div class=“column is-half”>
+ <div class="column is-half">
    <ul>
     <li>  Company <%= profile.company %> </li>
     <li>   Name <%= profile.name %> </li>
     <li>  Website <%= profile.website %> </li>
     <li>  Email <%= profile.email %> </li>
   </ul>
-  <a href=“/profiles/<%= profile.id %>/edit”>Edit</a>
-  <form action=“/profiles/<%= profile.id %>/” method=“post”>
+  <a href="/networks/<%= profile.id %>/edit">Edit</a>
+  <form action="/networks/<%= profile.id %>/" method=“post”>
     <input type=“hidden” name=“_method” value=>
     <button name=“button”>DELETE</button>
 

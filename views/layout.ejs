@@ -9,23 +9,7 @@
     <script src="/js/app.js" charset="utf-8"></script>
   </head>
   <body>
-
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li><a href="/">Users</a></li>
-          <% if(locals.isLoggedIn){%>
-              <li>Hi <%= locals.user.username %></li>
-              <li><a href="/logout">Logout</a></li>
-              <li><a href="/networks/new">Add profile</a> </li>
-
-          <%} else {%>
-              <li><a href="/login">Login</a></li>
-              <li><a href="/registrations">Sign up</a></li>
-          <% } %>
-        </ul>
-      </div>
-    </div>
+    <%- include ./partials/_navbar %>
     <% if(locals.isHomepage) { %>
         <div class="image_wrapper" id="this_one"><img src="http://www.constructionleadersclub.com/wp-content/uploads/2015/07/networking-event.jpg" width="1500" height="" />
           <div class="container">

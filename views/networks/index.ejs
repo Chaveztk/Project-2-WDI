@@ -1,11 +1,11 @@
 <h2>All Pictures</h2>
 
-
 <ul>
 
 <% profiles.forEach( profile =>{ %>
   <li>
-     <a href='/network/<%= profile._id %> '><%= profile.company %></a>
+     <a href='/network/<%= profile.id %> '><%= profile.comapny %></a>
+    <img style="max-width: 200px " src='<%= picture.image %>' alt='<%= picture.company %>' />
     <% if(profile.creator){%>
       <%= profile.creator.username %>
     <% } %>
