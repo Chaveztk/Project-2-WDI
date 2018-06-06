@@ -13,7 +13,7 @@ function createRoute(req, res) {
         return res.status(401).render('sessions/new', {message: 'Unrecognised Credentials'});
       }
       req.session.userId = user.id; // adding to the session a key "user id" (creating a cookie)
-      return res.redirect('networks/new');
+      return res.redirect('/');
     });
 }
 
