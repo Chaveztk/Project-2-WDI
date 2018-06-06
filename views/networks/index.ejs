@@ -5,7 +5,7 @@
 
 <% profiles.forEach( profile =>{ %>
   <li>
-     <a href='/network/<%= profile._id %> '><%= profile.title %></a>
+     <a href='/network/<%= profile._id %> '><%= profile.company %></a>
     <% if(profile.creator){%>
       <%= profile.creator.username %>
     <% } %>
