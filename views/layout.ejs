@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/app.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <%- include ./partials/_navbar %>
+    <% if(locals.isHomepage) { %>
+        <div class="image_wrapper" id="this_one"><img src="http://www.constructionleadersclub.com/wp-content/uploads/2015/07/networking-event.jpg" width="1500" height="" />
+          <div class="container">
+            <%- body %>
+          </div>
+        </div>
+    <% } else { %>
+      <section class="section">
+        <div class="container">
+          <%- body %>
+        </div>
+      </section>
+    <% } %>
+  </body>
+  <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Social Network</strong> by <a href="https://jgthms.com">Chavez King</a>. The source code is licensed
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+      </p>
+    </div>
+  </div>
+</footer>
+</html>

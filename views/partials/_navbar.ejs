@@ -1,0 +1,102 @@
+<%# <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ0x8p0xqjTAKx9-AEjVPfylaoGftnSR72ffXe1BSHzSfOgS5Oew" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
+
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>  <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        <a href="/sportsEquipment" class="navbar-item">
+          Sports Equipment
+        </a>
+      </div>
+    </div>
+</nav> %>
+<nav class="navbar is-light">
+    <div class="navbar-brand">
+      <div id="vez">
+        <a class="navbar-item" href="/">
+          <img src="https://www.royaleboost.com/template/default-profile-img.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+        </a>
+      </div>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-start">
+        <div class="top-bar">
+          <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+              <li><a href="/">Users</a></li>
+              <% if(locals.isLoggedIn){%>
+                  <li>Hi <%= locals.user.username %></li>
+                  <li><a href="/logout">Logout</a></li>
+                  <li><a href="/networks/new">Add profile</a> </li>
+
+              <%} else {%>
+                  <li><a href="/login">Login</a></li>
+                  <li><a href="/registrations">Sign up</a></li>
+              <% } %>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="/documentation/overview/start/">
+            Docs
+          </a>
+          <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item" href="">
+              My Profile
+            </a>
+            <a class="navbar-item" href="">
+              Add User
+            </a>
+            <a class="navbar-item" href="">
+              Columns
+            </a>
+            <a class="navbar-item" href="">
+              Layout
+            </a>
+            <a class="navbar-item" href="">
+              Form
+            </a>
+            <hr class="navbar-divider">
+          </div>
+        </div>
+      </div>
+      <form>
+        <input type="text" name="firstname" placeholder="Search Events">
+        <div id="submit-button">
+          <button>Submit</button>
+        </div>
+      </form>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://localhost:4000" target="_blank" href="https://uk.linkedin.com/: a modern CSS framework based on Flexbox&amp;hashtags=bulmaio&amp;url=http://localhost:4000&amp;via=jgthms"><img src="http://challengesworldwide.com/wp-content/uploads/2017/04/LinkedIn_Logo.svg.png" />
+              </a>
+            </p>
+            <p class="control">
+              <a class="button is-primary" href="https://github.com/jgthms/bulma/releases/download/0.7.1/bulma-0.7.1.zip">
+                <span class="icon">
+                  <i class="fas fa-download"></i>
+                </span>
+                <span>Download</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>

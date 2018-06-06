@@ -1,0 +1,14 @@
+<h2>All Pictures</h2>
+
+
+<ul>
+
+<% profiles.forEach( profile =>{ %>
+  <li>
+     <a href='/network/<%= profile._id %> '><%= profile.title %></a>
+    <% if(profile.creator){%>
+      <%= profile.creator.username %>
+    <% } %>
+  </li>
+<% }) %>
+</ul>

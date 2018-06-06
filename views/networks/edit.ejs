@@ -1,0 +1,11 @@
+<form action="/networks/show<%= profile.id %>" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <div>
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" value="<%= profile.title %>">
+    </div>
+    <div>
+        <label for="url">Url</label>
+        <input type="url" name="url" id="url"  value="<%= profile.url %>">
+    </div>
+</form>
