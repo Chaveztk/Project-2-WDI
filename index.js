@@ -51,8 +51,7 @@ app.use((req, res, next) => {
 
 app.use(routes);
 
-app.listen(port, () => console.log('Express is listening to port 4000'));
-
+app.listen(port, () => console.log(`Èxpress is listening to port ${port}`));
 
 
 
