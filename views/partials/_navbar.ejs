@@ -20,8 +20,8 @@
               <% if(locals.isLoggedIn){%>
                   <li>Hi <%= locals.user.username %></li>
                   <li><a href="/logout">Logout</a></li>
-                  <li><a href="/networks/new">Update profile</a> </li>
-                  <li><a href="/networks/index">Display Company Users</a> </li>
+                  <li><a href="/profiles/new">Update profile</a> </li>
+                  <li><a href="/users/index">Display Company Users</a> </li>
               <%} else {%>
                   <li><a href="/login">Login</a></li>
                   <li><a href="/registrations">Sign up</a></li>

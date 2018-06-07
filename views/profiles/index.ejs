@@ -1,6 +1,6 @@
 <% if(locals.isLoggedIn){ %>
   <div class="columns is-multiline">
-   <% profiles.forEach( (profile, key) => { %>
+   <% profiles.forEach( (profile) => { %>
      <% if (user.id.toString() === profile.creator._id.toString()) { %>
        <div class="column is-one-third-desktop is-half-tablet">
          <div class="card">
@@ -12,7 +12,7 @@
            <div class="card-content">
              <div class="content">
                  <h4 class="title is-4">
-                 <a href="/networks/<%= profile._id %>">
+                 <a href="/profiles/<%= profile._id %>">
                  <%= profile.name %>
                  </a>
                  </h4>

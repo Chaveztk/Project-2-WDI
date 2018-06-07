@@ -10,8 +10,8 @@
     <li>  <strong>Website :</strong>  <%= profile.website %> </li>
     <li>  <strong>Email :</strong>  <%= profile.email %> </li>
   </ul>
-  <a href="/networks/<%= profile.id %>/edit">Edit</a>
-  <form action="/networks/<%= profile.id %>/" method=“post”>
+  <a href="/profiles/<%= profile.id %>/edit">Edit</a>
+  <form action="/profiles/<%= profile.id %>/" method=“post”>
     <%# <input type=“hidden” name=“_method” value=> %>
     <button name=“button”>Delete Profile</button>
 

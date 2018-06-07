@@ -5,6 +5,7 @@ const static = require('../controllers/static');
 const registrations = require('../controllers/registrations');
 const sessions = require('../controllers/sessions');
 const profiles = require('../controllers/profiles');
+const users = require('../controllers/users');
 
 router.route('/')
   .get(profiles.index); // home page going to pictures
@@ -20,19 +21,19 @@ router.route('/login')
 router.route('/logout')
   .get(sessions.delete);
 
-router.route('/networks')
+router.route('/profiles')
   .get(profiles.index)
   .post(profiles.create);
 
-router.route('/networks/new')
+router.route('/profiles/new')
   .get(profiles.new);
 
-router.route('/networks/:id')
+router.route('/profiles/:id')
   .get(profiles.show)
   .put(profiles.update)
   .delete(profiles.delete);
 
-router.route('/networks/:id/edit')
+router.route('/profiles/:id/edit')
   .get(profiles.edit);
 
   // router.route('/networks/:id/comment')

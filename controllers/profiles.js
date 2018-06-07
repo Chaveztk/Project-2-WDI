@@ -3,12 +3,12 @@ const UserProfile = require('../models/profile.js');
 function indexRoute(req, res){
   UserProfile
     .find()
-    .populate('creator')
+    // .populate('creator')
     .exec()
     .then( profiles => {
-      res.render('networks/index', {profiles});
+      res.render('profiles/index', {profiles});
       console.log(profiles);
-    });
+    })
 }
 
 function showRoute(req, res){
@@ -16,13 +16,13 @@ function showRoute(req, res){
     .findById(req.params.id)
     .exec()
     .then( profile => {
-      res.render('networks/show', {profile});
+      res.render('profiles/show', {profile});
     });
 }
 
 function newRoute(req, res){
-  if(!res.locals.isLoggedIn) return res.redirect('/');
-  res.render('networks/new');
+  if(!res.locals.isLoggedIn) return res.redirect('/users');
+  res.render('profiles/new');
 }
 
 function createRoute(req, res){
@@ -31,7 +31,7 @@ function createRoute(req, res){
   UserProfile
     .create(req.body)
     .then((profile) =>{
-      return res.redirect(`networks/${profile._id}`);
+      return res.redirect(`profiles/${profile._id}`);
     });
 }
 
@@ -40,7 +40,7 @@ function editRoute(req, res){
     .findById(req.params.id)
     .exec()
     .then(profile =>{
-      res.redirect('/networks/edit', {profile});
+      res.redirect('/profiles/edit', {profile});
     });
 }
 
@@ -49,7 +49,7 @@ function updateRoute(req, res){
     .findById(req.params.id)
     .update(req.body)
     .then(profile => {
-      return res.redirect(`/networks${profile.id}`);
+      return res.redirect(`/profiles${profile.id}`);
     });
 }
 
@@ -58,7 +58,7 @@ function deleteRoute(req, res){
     .findById(req.params.id)
     .then(profile => {
       profile.remove();
-      return res.redirect('/networks');
+      return res.redirect('/profiles');
     });
 }
 

@@ -1,0 +1,7 @@
+<h2>  <%= profiles.company %></h2>
+<img src='<%= picture.url %>' alt='<%= picture.title %>' />
+
+<form class="" action="/profiles/<%= profile.id%>/comment" method="post">
+  <textarea name="content" rows="8" cols="80"></textarea>
+  <button name="button">Post a comment</button>
+</form>
