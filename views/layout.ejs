@@ -9,11 +9,9 @@
     <script src="/js/app.js" charset="utf-8"></script>
   </head>
   <body>
-
     <%- include ./partials/_navbar %>
     <% if(locals.isHomepage) { %>
         <div class="image_wrapper" id="this_one">
-          <!-- <img src="http://www.constructionleadersclub.com/wp-content/uploads/2015/07/networking-event.jpg" width="1500" height="15"/> -->
           <div class="container">
             <%- body %>
           </div>
@@ -22,12 +20,13 @@
       <div class="pageHeader">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgiimEg47YtN0YbI70TRcrYAWhR6clp2LtTdGCXA_sq9WglgtwZA"/>
       </div>
-      <!-- <div class="bodyimage">
+      <!-- <div class="backg-img">
         <img src="http://www.constructionleadersclub.com/wp-content/uploads/2015/07/networking-event.jpg" width="1500" height="15"/>
       </div> -->
-      <section class="section">
+      <section class="section main">
         <div class="container">
           <%- body %>
+          
         </div>
       </section>
     <% } %>
