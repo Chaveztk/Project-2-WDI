@@ -1,16 +1,7 @@
 <% if(locals.isLoggedIn){ %>
-  <% console.log('this should be user', user); %>
-
-
   <div class="columns is-multiline">
    <% profiles.forEach( (profile, key) => { %>
-
-     <% console.log('broswer id', user.id); %>
-     <% console.log('profile id', profile.creator._id); %>
-
      <% if (user.id.toString() === profile.creator._id.toString()) { %>
-       <% console.log('Matched'); %>
-       <h1><%= profile.creator._id %></h1>
        <div class="column is-one-third-desktop is-half-tablet">
          <div class="card">
            <div class="card-image">
@@ -31,8 +22,6 @@
          </div>
        </div>
      <% }%>
-
-
      <% }) %>
   </div>
 <% }%>

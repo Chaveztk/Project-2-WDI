@@ -12,12 +12,18 @@
     <%- include ./partials/_navbar %>
     <% if(locals.isHomepage) { %>
         <div class="image_wrapper" id="this_one">
-          <img src="http://www.constructionleadersclub.com/wp-content/uploads/2015/07/networking-event.jpg" width="1500" height="15" />
+          <img src="http://www.constructionleadersclub.com/wp-content/uploads/2015/07/networking-event.jpg" width="1500" height="15"/>
           <div class="container">
             <%- body %>
           </div>
         </div>
     <% } else { %>
+      <div class="pageHeader">
+      <!-- <strong><h1>Welcome</h1></strong> -->
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgiimEg47YtN0YbI70TRcrYAWhR6clp2LtTdGCXA_sq9WglgtwZA"/>
+      <img src="http://www.constructionleadersclub.com/wp-content/uploads/2015/07/networking-event.jpg" width="1500" height="15"/>
+
+      </div>
       <section class="section">
         <div class="container">
           <%- body %>
@@ -37,3 +43,5 @@
   </div>
 </footer>
 </html>
+
+<!-- https://careclimatechange.org/wp-content/uploads/2015/04/Networks.png -->
