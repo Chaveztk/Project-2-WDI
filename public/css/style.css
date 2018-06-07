@@ -20,12 +20,6 @@ body{
    background:#999999;
 }
 
-/* .pageHeader{
-  background-image: url("http://www.constructionleadersclub.com/wp-content/uploads/2015/07/networking-event.jpg");
-  background-repeat: no-repeat;
-  height: 100%;
-} */
-
-.image_wrapper{
-  background-image: url("http://www.constructionleadersclub.com/wp-content/uploads/2015/07/networking-event.jpg");
+.pageHeader{
+  text-align: center;
 }
